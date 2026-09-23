@@ -90,6 +90,9 @@ steps:
           if [[ $branch == "202608" ]]; then
             branch_head=202605
           fi
+          if [[ $branch == "202511-azd" ]]; then
+            branch_head=202511
+          fi
           echo "- $branch" | tee -a $cur_dir/log
           rc=0
           git ls-remote --exit-code $origin refs/heads/$branch_head || rc=$?
